@@ -34,3 +34,9 @@ def create(request):
 
     else:
         return render(request, 'superheroes/create.html')
+
+def edit(request):
+    pass
+
+def delete(request):
+    pass
