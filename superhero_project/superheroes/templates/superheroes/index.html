@@ -9,6 +9,9 @@
 <body>
     <h1>List of Heroes</h1>
     
+    {% load static %}
+    <img src="{% static 'ironman.jpg' %}" alt="Iron Man">
+
     <ul>
         {% for hero in all_heroes %}
         <li> <h2>{{hero.name}} - <a href="{% url 'superheroes:detail' hero.id %}">Click for Details</a>&nbsp;
