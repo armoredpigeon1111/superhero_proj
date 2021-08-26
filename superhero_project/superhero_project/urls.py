@@ -24,4 +24,3 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/superheroes/'))
 ]
 
-urlpatterns += staticfiles_urlpatterns()
