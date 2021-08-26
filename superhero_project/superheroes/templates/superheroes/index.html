@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Grayscale - Start Bootstrap Theme</title>
+        <title>Superheroes</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -25,16 +25,21 @@
         <img src="{% static 'ironman.jpg' %}" alt="Iron Man" width="25%">
         
         <hr>
-        
-        <ul>
+
+        <table>
             {% for hero in all_heroes %}
-            <li> <h2>{{hero.name}} - <a href="{% url 'superheroes:detail' hero.id %}">Click for Details</a>&nbsp;
-                <a href="{% url 'superheroes:edit' hero.id %}">Click for Edit</a>&nbsp;
-                <a href="{% url 'superheroes:delete' hero.id %}">Click for delete</a>
-               </h2> </li>
+            <tr> <h2>   <td>{{hero.name}}</td>  </h2>
+                        <td><a href="{% url 'superheroes:detail' hero.id %}">Details &nbsp;</a></td>
+                        <td><a href="{% url 'superheroes:edit' hero.id %}">Edit &nbsp;</a></td>
+                        <td><a href="{% url 'superheroes:delete' hero.id %}">Delete &nbsp;</a></td>
+                
+               
+               
+            </tr>
             {% endfor %}
-    
-        </ul>
+
+        </table>
+
         <a href="{% url 'superheroes:create' %}">Add New Hero</a>
 
 
