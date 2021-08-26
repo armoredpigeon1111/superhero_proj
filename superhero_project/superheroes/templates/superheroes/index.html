@@ -31,10 +31,7 @@
             <tr> <h2>   <td>{{hero.name}}</td>  </h2>
                         <td><a href="{% url 'superheroes:detail' hero.id %}">Details &nbsp;</a></td>
                         <td><a href="{% url 'superheroes:edit' hero.id %}">Edit &nbsp;</a></td>
-                        <td><a href="{% url 'superheroes:delete' hero.id %}">Delete &nbsp;</a></td>
-                
-               
-               
+                        <td><a href="{% url 'superheroes:delete' hero.id %}">Delete &nbsp;</a></td>                
             </tr>
             {% endfor %}
 
