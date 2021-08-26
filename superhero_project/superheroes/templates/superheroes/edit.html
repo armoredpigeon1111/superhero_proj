@@ -9,14 +9,14 @@
 <body>
 
 
-    <form action="{% url 'superheroes:edit' %}" method="post">
+    <form action="{% url 'superheroes:edit' single_hero.id %}" method="post">
         {% csrf_token %}
-        Name: {{single_hero.name}} Enter new Name: <input type="text" name="name" id="name"><br>
-        Alter Ego: {{single_hero.alter_ego}} Enter new Alter Ego: <input type="text" name="alter_ego" id="alter_ego"><br>
-        Primary Ability: {{single_hero.primary_ability}} Enter new Primary Ability: <input type="text" name="primary" id="primary"><br>
-        Secondary Ability: {{single_hero.secondary_ability}} Enter new Secondary Ability: <input type="text" name="secondary" id="secondary"><br>
-        Catch Phrase; {{single_hero.catch_phrase}} Enter new Catchphrase: <input type="text" name="catchphrase" id="catchphrase"><br>
-        <input type="submit" value="Add!">
+        Name: {{single_hero.name}} Enter new Name: <input type="text" name="name" id="name" value={{single_hero.name}}><br>
+        Alter Ego: {{single_hero.alter_ego}} Enter new Alter Ego: <input type="text" name="alter_ego" id="alter_ego" value={{single_hero.alter_ego}}><br>
+        Primary Ability: {{single_hero.primary_ability}} Enter new Primary Ability: <input type="text" name="primary" id="primary" value={{single_hero.primary_ability}}><br>
+        Secondary Ability: {{single_hero.secondary_ability}} Enter new Secondary Ability: <input type="text" name="secondary" id="secondary" value={{single_hero.secondary_ability}}><br>
+        Catch Phrase; {{single_hero.catch_phrase}} Enter new Catchphrase: <input type="text" name="catchphrase" id="catchphrase" value={{single_hero.catch_phrase}}><br>
+        <input type="submit" value="Update!">
     </form>
 
 
